@@ -1,0 +1,42 @@
+.PersonalPage {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+  padding-top: 3.2rem;
+  border: 1px solid #ccc;
+}
+.personalInfoParrent {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.PersonalInformationParrent {
+  position: relative;
+  border: 1px solid black;
+  padding: 1.2rem;
+  width: 64.5rem;
+  height: 18.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ListOfTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.ListOfTitles > p {
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.NameParrent > p {
+  font-size: 1.8rem;
+}
+.HoveringText {
+  top: -1.2rem;
+  padding: 0.2rem;
+  color: black;
+  background-color: white;
+  font-size: 1.8rem;
+  position: absolute;
+}

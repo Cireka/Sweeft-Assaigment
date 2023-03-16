@@ -6,7 +6,10 @@ const UserBox = (props) => {
   const BoxClickHandler = () => {
     router.push({
       pathname: "/person",
-      query: { Id: props.id },
+      query: {
+        Id: props.id,
+        imgUrl: `http://placeimg.com/640/480/animals?v=${props.id}`,
+      },
     });
   };
 
