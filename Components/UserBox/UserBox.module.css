@@ -1,0 +1,30 @@
+.BoxParrent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid #ccc;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+.BoxParrent:visited {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.BoxParrent:hover {
+  cursor: pointer;
+}
+.BoxParrent > img {
+  width: 100%;
+  height: auto;
+}
+.BoxParrent > strong {
+  padding: 0.2rem 1rem;
+  font-size: 1.6rem;
+}
+.BoxParrent > p {
+  padding: 0.2rem 1rem;
+  font-size: 1.6rem;
+}
