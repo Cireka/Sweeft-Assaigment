@@ -12,7 +12,6 @@ const List = () => {
       const scrollY = window.scrollY; // current vertical position of scroll bar
       const height = document.documentElement.scrollHeight - window.innerHeight; // height of the page
       const scrolled = Math.floor((scrollY / height) * 100); // percentage scrolled
-      console.log(`${scrolled}%`);
 
       if (scrolled === 100) {
         ctx.addData();
@@ -25,7 +24,7 @@ const List = () => {
       {data.map((item) => (
         <UserBox
           id={item.id}
-          key={item.id}
+          key={Math.random()}
           lastName={item.lastName}
           name={item.name}
           img={item.imageUrl}

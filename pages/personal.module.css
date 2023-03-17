@@ -40,3 +40,11 @@
   font-size: 1.8rem;
   position: absolute;
 }
+.ListParrent {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.4rem;
+}
