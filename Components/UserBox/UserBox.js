@@ -10,7 +10,7 @@ const UserBox = (props) => {
       pathname: `/personId${props.id}`,
       query: {
         Id: props.id,
-        imgUrl: `https://placeimg.com/640/480/animals?v=${props.id}`,
+        imgUrl: `http://placeimg.com/640/480/animals?v=${props.id}`,
         name: fullName,
         firstName: props.name,
         lastName: props.lastName,
@@ -22,7 +22,7 @@ const UserBox = (props) => {
     <div onClick={BoxClickHandler} className={style.BoxParrent}>
       <img
         className={style.Test}
-        src={`https://placeimg.com/640/480/animals?v=${props.id}`}
+        src={`http://placeimg.com/640/480/animals?v=${props.id}`}
         alt="User Image"
       />
       <strong>

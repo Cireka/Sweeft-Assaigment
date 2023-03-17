@@ -36,7 +36,7 @@ function Person() {
     if (Id) {
       // ensure that Id is defined before making the fetch call
       fetch(
-        `https://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${Id}`
+        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${Id}`
       )
         .then((response) => {
           response.json().then((data) => {
@@ -128,7 +128,7 @@ function Person() {
             <Link
               key={Math.random()}
               className={style.Visited}
-              href={`https://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}r`}
+              href={`http://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}r`}
             >
               {item.fullName}
             </Link>
