@@ -9,26 +9,21 @@ import Link from "next/link";
 function Person() {
   const [personalData, setPersonalData] = useState(null);
   const [userFriends, setUserFriends] = useState(null);
-
   const router = useRouter();
   const { name, Id, imgUrl, firstName, lastName } = router.query;
   const ctx = useContext(DataContext);
 
   useEffect(() => {
-    const lastItem = ctx.nameList.slice(-1)[0];
     if (name && Id && imgUrl && firstName && lastName) {
       ctx.addName(name, Id, imgUrl, firstName, lastName);
     }
   }, [name, Id, imgUrl, firstName, lastName]);
 
   useEffect(() => {
-    if (userFriends === null) {
-      setUserFriends(ctx.friendsData);
-      console.log(ctx.friendsData);
-    } else {
-      setUserFriends(ctx.friendsData.list);
-    }
+    setUserFriends(ctx.friendsData.list);
   }, [ctx.friendsData]);
+
+  console.log(ctx.friendsData);
 
   useEffect(() => {
     setUserFriends((prevData) => {
@@ -136,7 +131,7 @@ function Person() {
             <Link
               key={Math.random()}
               className={style.Visited}
-              href={`http://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}r`}
+              href={`http://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}`}
             >
               {item.fullName}
             </Link>
