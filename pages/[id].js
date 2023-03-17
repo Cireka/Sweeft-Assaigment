@@ -128,7 +128,7 @@ function Person() {
             <Link
               key={Math.random()}
               className={style.Visited}
-              href={`http://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}r`}
+              href={`https://localhost:3000/personId2?Id=${item.Id}&imgUrl=${item.imgUrl}&name=${item.firstName}+${item.lastName}r`}
             >
               {item.fullName}
             </Link>
