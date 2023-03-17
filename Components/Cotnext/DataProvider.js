@@ -13,18 +13,21 @@ const DataProvider = (props) => {
   const [name, setName] = useState([]);
 
   const addNameHandler = (fullName, Id, imgUrl, firstName, lastName) => {
-    setName((prevName) => [
-      ...prevName,
-      ...[
-        {
-          fullName: fullName,
-          Id: Id,
-          imgUrl: imgUrl,
-          firstName: firstName,
-          lastName: lastName,
-        },
-      ],
-    ]);
+    // Checking so that same user doesnot gets added twice
+    if (!name.some((item) => item.Id === Id)) {
+      setName((prevName) => [
+        ...prevName,
+        ...[
+          {
+            fullName: fullName,
+            Id: Id,
+            imgUrl: imgUrl,
+            firstName: firstName,
+            lastName: lastName,
+          },
+        ],
+      ]);
+    }
   };
 
   const idSetterHandler = (id) => {

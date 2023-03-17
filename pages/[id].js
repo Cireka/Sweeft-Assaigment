@@ -23,8 +23,6 @@ function Person() {
     setUserFriends(ctx.friendsData.list);
   }, [ctx.friendsData]);
 
-  console.log(ctx.friendsData);
-
   useEffect(() => {
     setUserFriends((prevData) => {
       if (Array.isArray(prevData)) {
