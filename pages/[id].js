@@ -20,7 +20,6 @@ function Person() {
     }
   }, [name, Id, imgUrl, firstName, lastName]);
 
-
   useEffect(() => {
     if (userFriends === null) {
       setUserFriends(ctx.friendsData);
@@ -37,7 +36,7 @@ function Person() {
     if (Id) {
       // ensure that Id is defined before making the fetch call
       fetch(
-        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${Id}`
+        `https://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${Id}`
       )
         .then((response) => {
           response.json().then((data) => {
