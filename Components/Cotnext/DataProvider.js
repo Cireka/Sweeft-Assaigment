@@ -42,7 +42,6 @@ const DataProvider = (props) => {
       )
         .then((response) => {
           response.json().then((data) => {
-            // setFriendsData((oldData) => [...oldData, ...data.list]);
             setFriendsData(data);
           });
         })
@@ -62,7 +61,6 @@ const DataProvider = (props) => {
         .then((response) => {
           response.json().then((data) => {
             setAdditionalFriends(data.list);
-            // setAdditionalFriends((prevData) => [...prevData, ...data.list]);
           });
         })
         .catch((error) => {

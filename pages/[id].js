@@ -15,6 +15,7 @@ function Person() {
   const ctx = useContext(DataContext);
 
   useEffect(() => {
+    const lastItem = ctx.nameList.slice(-1)[0];
     if (name && Id && imgUrl && firstName && lastName) {
       ctx.addName(name, Id, imgUrl, firstName, lastName);
     }
@@ -23,13 +24,20 @@ function Person() {
   useEffect(() => {
     if (userFriends === null) {
       setUserFriends(ctx.friendsData);
+      console.log(ctx.friendsData);
     } else {
       setUserFriends(ctx.friendsData.list);
     }
   }, [ctx.friendsData]);
 
   useEffect(() => {
-    setUserFriends((prevData) => [...prevData, ...ctx.additionalFriends]);
+    setUserFriends((prevData) => {
+      if (Array.isArray(prevData)) {
+        return [...prevData, ...ctx.additionalFriends];
+      }
+      // If prevData is not iterable, return an empty array
+      return [];
+    });
   }, [ctx.additionalFriends]);
 
   useEffect(() => {
@@ -133,6 +141,7 @@ function Person() {
               {item.fullName}
             </Link>
           );
+          ("");
         })}
       </div>
       <h2 className={style.FriendsTitle}>Friends:</h2>
