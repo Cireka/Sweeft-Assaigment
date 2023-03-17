@@ -10,6 +10,23 @@ const DataProvider = (props) => {
   const [friendsData, setFriendsData] = useState([]);
   const [additionalFriends, setAdditionalFriends] = useState([]);
 
+  const [name, setName] = useState([]);
+
+  const addNameHandler = (fullName, Id, imgUrl, firstName, lastName) => {
+    setName((prevName) => [
+      ...prevName,
+      ...[
+        {
+          fullName: fullName,
+          Id: Id,
+          imgUrl: imgUrl,
+          firstName: firstName,
+          lastName: lastName,
+        },
+      ],
+    ]);
+  };
+
   const idSetterHandler = (id) => {
     setUserId(id);
   };
@@ -54,8 +71,6 @@ const DataProvider = (props) => {
     }
   }, [friendsCount]);
 
-  console.log(additionalFriends);
-
   useEffect(() => {
     fetch(
       `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${count}/16`
@@ -81,6 +96,8 @@ const DataProvider = (props) => {
     addFriendsData: addFriendsDataHandler,
     friendsData: friendsData,
     additionalFriends: additionalFriends,
+    addName: addNameHandler,
+    nameList: name,
   };
 
   return (

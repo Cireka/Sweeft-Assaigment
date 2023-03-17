@@ -2,19 +2,24 @@
   max-width: 120rem;
   margin: 0 auto;
   padding: 1.2rem;
-  padding-top: 3.2rem;
+  padding-top: 1.2rem;
   border: 1px solid #ccc;
 }
 .personalInfoParrent {
   display: flex;
   gap: 1.2rem;
   align-items: center;
+  padding: 2rem;
+  margin-bottom: 3.2rem;
 }
 .PersonalInformationParrent {
   position: relative;
   border: 1px solid black;
-  padding: 1.2rem;
-  width: 64.5rem;
+  padding-left: 1.2rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1.2rem;
+  width: 67.5rem;
   height: 18.7rem;
   display: flex;
   flex-direction: column;
@@ -33,7 +38,7 @@
   font-size: 1.8rem;
 }
 .HoveringText {
-  top: -1.2rem;
+  top: -1.4rem;
   padding: 0.2rem;
   color: black;
   background-color: white;
@@ -47,4 +52,39 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2.4rem;
+}
+.Address {
+  width: 17.5rem;
+  height: 20.7rem;
+  border: 1px solid black;
+}
+.AddressContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+.AddressContainer > p {
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.HoveringAddress {
+  top: -1.4rem;
+  padding: 0.2rem;
+  color: black;
+  background-color: white;
+  font-size: 1.8rem;
+  position: absolute;
+}
+.FriendsTitle {
+  font-size: 2.2rem;
+}
+.Visited {
+  font-size: 2rem;
+}
+.VisitedParrent {
+  margin-bottom: 3.2rem;
+  display: flex;
+  gap: 1.2rem;
 }

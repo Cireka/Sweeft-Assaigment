@@ -7,6 +7,8 @@ const DataContext = React.createContext({
   idSetter: (id) => {},
   addFriendsData: () => {},
   addData: () => {},
+  addName: (fullName, Id, imgUrl, firstName, lastName) => {},
+  nameList: [],
 });
 
 export default DataContext;
