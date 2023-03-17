@@ -38,7 +38,7 @@ const DataProvider = (props) => {
     if (userId) {
       // ensure that Id is defined before making the fetch call
       fetch(
-        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${userId}/friends/${friendsCount}/16`
+        `HTTPS://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${userId}/friends/${friendsCount}/16`
       )
         .then((response) => {
           response.json().then((data) => {
@@ -57,7 +57,7 @@ const DataProvider = (props) => {
       // ensure that Id is defined before making the fetch call
 
       fetch(
-        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${userId}/friends/${friendsCount}/16`
+        `HTTPS://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${userId}/friends/${friendsCount}/16`
       )
         .then((response) => {
           response.json().then((data) => {
@@ -73,7 +73,7 @@ const DataProvider = (props) => {
 
   useEffect(() => {
     fetch(
-      `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${count}/16`
+      `HTTPS://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${count}/16`
     )
       .then((response) => {
         response.json().then((newData) => {
